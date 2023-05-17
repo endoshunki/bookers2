@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   get '' => 'homes#top'
   get '/home/about' => 'homes#about'
+  post '/books/:id' => 'books#create'
+  resources :books
+  resources :users
 end
